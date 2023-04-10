@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Поиск символа *</title>
+	<meta charset="utf-8">
+	<script>
+		function findLastAsterisk(str) {
+			var arr = str.split('');
+			var index = -1;
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] === '*') {
+					index = i;
+				}
+			}
+			return index;
+		}
+
+		function handleClick() {
+			var str = "JavaScript - мой *любимый язык программирования*!";
+			var index = findLastAsterisk(str);
+			if (index === -1) {
+				alert("Символ * не найден!");
+			} else {
+				alert("Индекс последнего символа *: " + index);
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="handleClick()">Найти символ *</button>
+</body>
+</html>
