@@ -1,0 +1,13 @@
+<html>
+<body>
+<script>
+
+let S = "hello, world, it's me";
+let lastIndex = S.lastIndexOf(",");
+let R = S.substring(0, lastIndex) + S.substring(lastIndex).replaceAll(/[^,]/g,"*");
+
+alert(S+"\n"+R)
+
+</script>
+</body>
+</html>
