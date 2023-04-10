@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+A=new Array(10);s='';
+for (i=0; i<A.length; i++)
+{
+y=Math.random()*10-5;
+A[i]=Math.floor(y);
+s=s+' '+A[i];
+}
+
+var lastPositive = -1;
+for(i=A.length-1; i>=0; i--){
+  if(A[i]>0){
+    lastPositive = A[i];
+    break;
+  }
+}
+if(lastPositive != -1){
+  alert(s+"\n"+"Последний положительный элемент в строке: " + lastPositive);
+} else {
+  alert(s+"\n"+"Положительных элементов в строке не обнаружено");
+}
+</script>
+</body> 
+</html>
